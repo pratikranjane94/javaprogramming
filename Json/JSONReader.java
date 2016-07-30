@@ -1,10 +1,8 @@
 package com.bridgelabz.classes;
 import com.bridgelabz.utility.Utility;
 import org.json.simple.parser.JSONParser;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-
 import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -12,7 +10,7 @@ import java.util.*;
 public class JSONReader{
 	public static void main(String[] args)throws Exception{
 		
-		//creating JSonParser Object
+		//creating JSonParser Object it is use to convert a JSON text to a JavaScript object.
 		JSONParser parser = new JSONParser();
 		
 		try{     
