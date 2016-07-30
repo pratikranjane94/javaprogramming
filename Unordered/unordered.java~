@@ -1,0 +1,96 @@
+import java.io.FileReader;
+//import java.io;
+import java.util.Arrays;
+import java.io.BufferedReader;
+import java.util.Scanner;
+public class unordered
+{
+public static void main(String[] args)throws Exception
+		{
+		String search,filecontent;
+		String fileData = u.readFile("xyz.txt");
+		fileData = fileData.trim();
+		String[] words = fileData.split(" ");
+		for(int i = 0;i<words.length;i++)
+		{
+		add.(words[i]);
+		}
+			System.out.println("Enter a word to search in the list");
+			String word = u.inputString();
+			 boolean option = search(word);
+				if(option)
+				{
+					delete(word);		
+				}
+				else
+				{
+					add(word);		
+				}		
+				display();
+		
+			
+
+public static void add(String val)
+{
+		Node<String> node = new Node<String>(val,null);    
+    size++ ;    
+    if(start == null)
+		{
+    	start = node;
+      end = start;
+    }
+    else
+		{
+ 	  	end.setLink(node);
+     	end = node;
+    }
+  }
+
+public static boolean search(String value)
+{
+    Node<String> temp=start;
+    if(temp==null)
+       return false;
+    while(temp!=null)
+    {
+      if(value.equals(temp.getData()))
+      {
+        return true;
+      }
+      temp=temp.getLink();
+    }
+    return false;
+  }
+			public static void delete(String data)
+						{
+  						Node<String> temp = start;
+  						Node<String> previous = start;
+   						Node<String> head = null;
+   						if(temp == null)
+							{
+    					 	System.out.println("List is empty");
+   						}
+   							else
+											{
+    										while(!data.equals(temp.getData()))
+												{
+       										 previous = temp; 
+        										temp = temp.getLink();
+     										}
+     										if(temp == start)
+												{
+       									start = start.getLink();
+       									temp.setLink(null);
+     										}
+     							else
+												{   
+        								previous.setLink(temp.getLink());
+       									temp.setLink(null);
+     										}
+   										}
+							}
+		
+	
+	
+	}
+	}

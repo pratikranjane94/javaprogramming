@@ -1,0 +1,11 @@
+{
+		"Name" : "Rice",
+		"Weight" : "50kg",
+		"Rate" : "32Rs/kg",
+		"Name" : "pulses",
+		"Weight" : "30kg",
+		"Rate" : "85Rs/kg",
+		"Name" : "wheat",
+		"Weight" : "30kg",
+		"Rate" : "25Rs/kg"
+}

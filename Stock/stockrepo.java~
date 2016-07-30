@@ -1,0 +1,78 @@
+import java.util.*;
+import java.io.*;
+public class stockrepo
+{
+public static void main(String[] args) 
+throws IOException{
+
+String sname[]=new String[100];
+int noofshares[]=new int[100];
+int shareprice[]=new int[100];
+
+FileReader fr=new FileReader("stocksummary.txt");
+int k=fr.read();
+while(k!=-1)
+{
+char ch=(char)k;
+if(ch.isDigit())
+{
+System.out.println(ch);
+}
+
+k=fr.read();
+}
+
+public static boolean isNumber(String string) {
+    try {
+        Long.parseLong(string);
+    } catch (Exception e) {
+        return false;
+    }
+    return true;
+}
+/*int [] tall = new int [100];
+int i = 0;
+while(sc.hasNextInt())
+{
+     tall[i++] = sc.nextInt();
+}
+for(int j=0;j<tall.length;j++)
+{
+System.out.println(tall[i]);
+}
+*/
+
+System.out.println("Enter no. of stocks you want to enter:");
+Scanner sc=new Scanner(System.in);
+int s=sc.nextInt();
+for(i=0;i<s;i++)
+{
+System.out.println("Enter name of share "+i);
+sc.nextLine();
+sname[i]=sc.nextLine();
+System.out.println("Enter no. of shares of share "+i);
+noofshares[i]=sc.nextInt();
+System.out.println("Enter shareprice of share "+i);
+shareprice[i]=sc.nextInt();
+}
+stockrepo st=new stockrepo();
+st.stockvalcalc(sname,noofshares,shareprice,s);
+}
+public static void stockvalcalc(String sname[],int noofshares[],int shareprice[],int s)
+{
+int total=0;
+System.out.println("        STOCK REPORT         ");
+System.out.println("STOCK NAME"+"\t"+"STOCK VALUE");
+System.out.println("__________"+"\t"+"___________");
+for(int i=0;i<s;i++)
+{
+
+int valofstock=noofshares[i]*shareprice[i];
+System.out.println(sname[i]+"\t\t"+valofstock);
+total=total+noofshares[i]*shareprice[i];
+}
+System.out.println("__________"+"\t"+"___________");
+System.out.println("TOTAL"+"\t\t"+total);
+
+}
+}

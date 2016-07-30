@@ -1,0 +1,38 @@
+package com.bridgelabz.classes;
+import com.bridgelabz.utility.Utility;
+class Binarysearchs
+{
+public static void main(String[] args)throws Exception
+{
+String searchs;
+Utility u= new Utility();
+//Scanner sc = new Scanner(System.in);
+//BufferedReader bin = new BufferedReader(new InputStreamReader(System.in));
+System.out.println("enter the number of words");
+int i =u.inputNumber();
+String[] a= new String[i];
+System.out.println("enter the elements");
+		for(int j=0;j<i;j++)
+			{
+			a[j]=u.inputString();
+			}
+			System.out.println("entered elements are");
+
+			for(int j=0;j<i;j++)
+			{
+			System.out.println(a[j]);
+			}
+System.out.println("enter element to be found ");
+searchs =u.inputString();
+
+int index=u.binarySearchString(a,searchs);
+if(index==-1)
+{
+System.out.println("entered element is  not found ");
+}
+else
+{
+System.out.println("enter element found at"+(index+1));
+
+}
+}}

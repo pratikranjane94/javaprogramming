@@ -1,0 +1,48 @@
+package com.bridgelabz.classes;
+import com.bridgelabz.utility.Utility;
+import java.text.*;
+import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.io.*;
+class Regular
+{
+			public static void main(String[] args)throws Exception
+				{
+				Utility u= new Utility();
+				String data=Read in the following message: Hello <<name>>, We have your full name as <<full name>> in our system. your contact number is 91-xxxxxxxxxx. Please,let us know in case of any clarification Thank you BridgeLabz 01/01/2016.
+				String name = "<<name>>";
+				String replaces="rahul";
+				pattern p1=pattern.compile(name);
+				matcher m1=p1.matcher(data);
+				data=m1.replaceAll(replaces);
+				String sn="fullname";
+				String replaces2="rahul tiwari" 
+				pattern p2=pattern.compile(sn);
+				matcher m2=p2.matcher(data);
+				data =m2.replaceAll(replaces2);
+				String no="91 x(10)";
+				String contact="7208558061"; 
+				pattern p3= pattern.compile(no);
+				matcher m3=p3.matcher(data);
+				data=m3.replaceAll(contact);
+				Date obj1= new Date();
+				simpleDateFormat df= new SimpleDateFormat("dd/mm/yyyy");
+				String currentdate =df.format(obj1);
+				System.out.println("the current date is ="+currentdate);
+				string date1="01/01/2016";
+				String replaces4=currentdate;
+				pattern p4=pattern.compile(date1);
+				matcher m4=p4.matcher(data);
+				data= m4.replaceAll(replace4);
+				System.out.println("after replacing output is =");
+				System.out.println(data);
+				
+
+}
+
+
+
+
+
+}
